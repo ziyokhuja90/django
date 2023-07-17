@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css\main.css' %}">
+</head>
+<body>
+    <div class="con">
+        <nav class="flex">
+            <img src="{% static './images./aaron-burden-9m5z1my-xZs-unsplash.jpg' %}" width="70" alt="rasm">
+            <ul class="flex">
+                <li><a href="main.html">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">help</a></li>
+            </ul>
+        </nav>
+        {% block content %}
+        <div class="content">
+            <h1>kitob 1</h1>
+            <div class="flex">
+            <img src="{% static './images./aaron-burden-9m5z1my-xZs-unsplash.jpg' %}" alt="rasm">
+            <div class="div">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit non rem, dolorum error odio ut neque fugiat quonem eaque veniam natus earum ipsa in assumenda itaque hic debitis maxime voluptate consectetur ea perferendis at reiciendis quisquam similique modi ex, cumque, distinctio ab? Deserunt fugit hic atque sunt!</p>
+            </div>
+            </div>
+        </div>
+        {% endblock content %}
+        <footer>django lesson 2023</footer>
+    </div>
+</body>
+</html>     
