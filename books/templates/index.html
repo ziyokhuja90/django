@@ -155,7 +155,7 @@
                     </span>
                   </h1>
                   <p>
-                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                   {{main.firstP}}
                   </p>
                   <a href="">
                     Contact Us
@@ -187,7 +187,8 @@
                     </span>
                   </h1>
                   <p>
-                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                   {{main.firstP}}
+                    
                   </p>
                   <a href="">
                     Contact Us
@@ -219,7 +220,8 @@
                     </span>
                   </h1>
                   <p>
-                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                    {{main.firstP}}
+                
                   </p>
                   <a href="">
                     Contact Us
@@ -250,7 +252,7 @@
   </section>
   <!-- end slider section -->
 </div>
-
+{% comment %} firstP {% endcomment %}
 
 <!-- book section -->
 
@@ -334,7 +336,10 @@
             </h2>
           </div>
           <p>
-            has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
+            {{main.secondP}}
+          
+
+
           </p>
           <a href="">
             Read More
@@ -344,7 +349,7 @@
     </div>
   </div>
 </section>
-
+{% comment %} secondP {% endcomment %}
 <!-- end about section -->
 
 
@@ -371,7 +376,10 @@
               Nephrologist Care
             </h4>
             <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+
+              {{main.thirdP}}
+
+              
             </p>
             <a href="">
               Read More
@@ -389,7 +397,10 @@
               Eye Care
             </h4>
             <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+              
+              {{main.thirdP}}
+              
+
             </p>
             <a href="">
               Read More
@@ -407,7 +418,10 @@
               Pediatrician Clinic
             </h4>
             <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+              
+              {{main.thirdP}}
+              
+
             </p>
             <a href="">
               Read More
@@ -425,7 +439,10 @@
               Parental Care
             </h4>
             <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
+             
+              {{main.thirdP}}
+              
+
             </p>
             <a href="">
               Read More
@@ -436,7 +453,7 @@
     </div>
   </div>
 </section>
-
+{% comment %} thirdP {% endcomment %}
 <!-- end treatment section -->
 
 <!-- team section -->
@@ -571,7 +588,10 @@
               <i class="fa fa-quote-left" aria-hidden="true"></i>
             </div>
             <p>
-              editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+             
+              {{main.forthP}}
+              
+
             </p>
           </div>
         </div>
@@ -589,7 +609,10 @@
               <i class="fa fa-quote-left" aria-hidden="true"></i>
             </div>
             <p>
-              Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+             
+              {{main.fifthP}}
+              
+
             </p>
           </div>
         </div>
@@ -607,7 +630,8 @@
               <i class="fa fa-quote-left" aria-hidden="true"></i>
             </div>
             <p>
-              Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+              {{main.fifthP}}
+
             </p>
           </div>
         </div>
@@ -626,7 +650,8 @@
   </div>
 </section>
 <!-- end client section -->
-
+{% comment %} forthP {% endcomment %}
+{% comment %} fifthP {% endcomment %}
 <!-- contact section -->
 <section class="contact_section layout_padding-bottom">
   <div class="container">
@@ -666,8 +691,12 @@
       </div>
     </div>
   </div>
-</section>
+</section> 
 <!-- end contact section -->
+
+
+
+
 {% endblock section %}
 <!-- info section -->
 <section class="info_section ">

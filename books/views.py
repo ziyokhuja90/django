@@ -1,8 +1,14 @@
 from django.shortcuts import render
+from .models import Main , books , index
 
 # Create your views here.
 def home(request):
-    return render(request , 'index.html')
+    ind = index.objects.first()
+    context = {
+        'main':ind
+    }
+    
+    return render(request , 'index.html',context)
 
 def doctor(request):
     return render(request , 'doctor.html')
