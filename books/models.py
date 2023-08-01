@@ -18,6 +18,12 @@ class index(models.Model):
     thirdP = models.TextField()
     forthP = models.TextField()
     fifthP = models.TextField()
+
+class Register(models.Model):
+    name = models.CharField(max_length=30)
+    doctorName = models.CharField(max_length=30)
+    ahvol = models.CharField(max_length=30)
+    phoneNumber = models.IntegerField()
+    belgilar = models.TextField()
+    boshlangan = models.DateField()
     
-class Image(models.Model):
-    img = models.ImageField()

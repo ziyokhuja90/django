@@ -1,14 +1,22 @@
 from django.shortcuts import render
-from .models import Main , books , index
-
+# from .models import index  
+from .forms import RegisterForm
 # Create your views here.
 def home(request):
-    ind = index.objects.first()
-    context = {
-        'main':ind
-    }
+    # ind = index.objects.first()
+    # context = {
+    #     'main':ind,
+    # }
     
-    return render(request , 'index.html',context)
+    form = RegisterForm(request.POST )
+    
+    if form.is_valid():
+        form.save()
+    
+    context = {
+        'form':form
+    }
+    return render(request , 'index.html' , context)
 
 def doctor(request):
     return render(request , 'doctor.html')

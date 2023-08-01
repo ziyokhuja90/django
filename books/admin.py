@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import books , Main , index , Image
+from .models import Register
 # Register your models here.
-admin.site.register(books)
-admin.site.register(Main)
-admin.site.register(index)
-admin.site.register(Image)
+
+admin.site.register(Register)
