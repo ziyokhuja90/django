@@ -1,6 +1,6 @@
 from django.shortcuts import render
-# from .models import index  
-from .forms import RegisterForm , EmailForm
+from .models import index , Image 
+from .forms import RegisterForm , EmailForm 
 # Create your views here.
 def home(request):
     # ind = index.objects.first()
@@ -28,7 +28,11 @@ def doctor(request):
 
 
 def about(request):
-    return render(request , 'about.html')
+    img = Image.objects.first()
+    context = {
+        'img':img
+    }
+    return render(request , 'about.html', context)
 
 
 def contact(request):

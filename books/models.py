@@ -29,3 +29,6 @@ class Register(models.Model):
     
 class Email(models.Model):
     email = models.EmailField()
+
+class Image(models.Model):
+    rasm = models.ImageField(upload_to='rasmlar')
