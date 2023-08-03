@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Register
+from .models import Register , Email
 
 class RegisterForm(forms.ModelForm):
     
@@ -16,4 +16,15 @@ class RegisterForm(forms.ModelForm):
             'phoneNumber': forms.NumberInput(attrs={'class':'form-control'}),
             'belgilar': forms.Textarea(attrs={'class':'form-control'}),
             'boshlangan': forms.DateInput(attrs={'type':'date','class':'form-control'})
+        }
+
+class EmailForm(forms.ModelForm):
+    
+    class Meta:
+        model = Email
+        fields = ['email']
+        
+        widgets = {
+            'email': forms.EmailInput(attrs={'class':'form-control'}),
+            
         }

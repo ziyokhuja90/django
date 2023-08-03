@@ -27,3 +27,5 @@ class Register(models.Model):
     belgilar = models.TextField()
     boshlangan = models.DateField()
     
+class Email(models.Model):
+    email = models.EmailField()

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # from .models import index  
-from .forms import RegisterForm
+from .forms import RegisterForm , EmailForm
 # Create your views here.
 def home(request):
     # ind = index.objects.first()
@@ -9,12 +9,17 @@ def home(request):
     # }
     
     form = RegisterForm(request.POST )
+    form1 = EmailForm(request.POST)
     
     if form.is_valid():
         form.save()
     
+    if form1.is_valid():
+        form1.save()
+        
     context = {
-        'form':form
+        'form':form,
+        'form1':form1
     }
     return render(request , 'index.html' , context)
 
@@ -34,3 +39,4 @@ def testimonial(request):
 
 def treatment(request):
     return render(request , 'treatment.html')
+

@@ -260,11 +260,15 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <form>
+        <form method="POST">
           <h4>
             BOOK <span>APPOINTMENT</span>
           </h4>
-          <div class="form-row ">
+          {% csrf_token %}  
+
+          {{form.as_p}}
+          
+          {% comment %} <div class="form-row ">
             <div class="form-group col-lg-4">
               <label for="inputPatientName">Patient Name </label>
               <input type="text" class="form-control" id="inputPatientName" placeholder="">
@@ -304,7 +308,7 @@
                 </span>
               </div>
             </div>
-          </div>
+          </div> {% endcomment %}
           <div class="btn-box">
             <button type="submit" class="btn ">Submit Now</button>
           </div>
@@ -710,10 +714,13 @@
         </a>
       </div>
       <div class="info_form">
-        <form action="">
-          <input type="email" placeholder="Your email">
-          <button>
-            Subscribe
+        <form method="POST">
+            {% csrf_token %}  
+          
+          {{form1.as_p}}
+          {% comment %} <input type="email" placeholder="Your email"> {% endcomment %}
+          <button type="submit">
+            SEND
           </button>
         </form>
       </div>
