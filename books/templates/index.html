@@ -135,6 +135,7 @@
 <section class="slider_section ">
     <div class="dot_design">
       <img src="{% static 'images/dots.png' %}" alt="">
+      {% comment %} dots  {% endcomment %}
     </div>
     <div id="customCarousel1" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -164,7 +165,8 @@
               </div>
               <div class="col-md-6">
                 <div class="img-box">
-                  <img src="{% static 'images/slider-img.jpg' %}" alt="">
+                  <img src="{{h.slider.url}}" alt="">
+                  {% comment %}slideer  {% endcomment %}
                 </div>
               </div>
             </div>
@@ -197,7 +199,8 @@
               </div>
               <div class="col-md-6">
                 <div class="img-box">
-                  <img src="{% static 'images/slider-img.jpg' %}" alt="">
+                  <img src="{{h.slider.url}}" alt="">
+                  {% comment %} slider 2 {% endcomment %}
                 </div>
               </div>
             </div>
@@ -230,7 +233,8 @@
               </div>
               <div class="col-md-6">
                 <div class="img-box">
-                  <img src="{% static 'images/slider-img.jpg' %}" alt="">
+                  <img src="{{h.slider.url}}" alt="">
+                  {% comment %} slider3 {% endcomment %}
                 </div>
               </div>
             </div>
@@ -252,6 +256,7 @@
   </section>
   <!-- end slider section -->
 </div>
+{% comment %} slider img {% endcomment %}
 {% comment %} firstP {% endcomment %}
 
 <!-- book section -->
@@ -329,7 +334,7 @@
     <div class="row">
       <div class="col-md-6 ">
         <div class="img-box">
-          <img src="{% static 'images/about-img.jpg' %}" alt="">
+          <img src="{{a.about.url}}" alt="">
         </div>
       </div>
       <div class="col-md-6">
@@ -353,6 +358,7 @@
     </div>
   </div>
 </section>
+{% comment %} about {% endcomment %}
 {% comment %} secondP {% endcomment %}
 <!-- end about section -->
 
@@ -474,7 +480,8 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/team1.jpg' %}" alt="" />
+              <img src="{{t.team1.url}}" alt="" />
+              {% comment %} team1 {% endcomment %}
             </div>
             <div class="detail-box">
               <h5>
@@ -503,7 +510,9 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/team2.jpg' %}" alt="" />
+              <img src="{{t.team2.url}}" alt="" />
+              {% comment %} team2 {% endcomment %}
+
             </div>
             <div class="detail-box">
               <h5>
@@ -532,7 +541,8 @@
         <div class="item">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/team3.jpg' %}" alt="" />
+              <img src="{{t.team3.url}}" alt="" />
+              {% comment %} team3 {% endcomment %}
             </div>
             <div class="detail-box">
               <h5>
