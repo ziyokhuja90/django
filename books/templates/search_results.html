@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block section %}
+<div class='d-flex justify-content-around w-100 p-5'>
+    {% for results in results %}
+    <div class="bg-info w-25 rounded border border-dark shadow-lg p-3 mb-5   d-flex flex-column p-5 align-items-center justify-content-around">
+    <h1>{{results.title}}</h1>
+    <div class="w-100 p-2">
+    <p>{{results.body}} </p>
+</div>
+    <img class="rasm" src="{{results.img.url}}" alt="rasm">
+    </div>
+    {% endfor %}
+</div>
+{% endblock section %}
+

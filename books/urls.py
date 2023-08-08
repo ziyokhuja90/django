@@ -9,6 +9,8 @@ urlpatterns = [
     path("contact",views.contact,name="contact"),
     path("testimonial",views.testimonial,name="testimonial"),
     path("treatment",views.treatment,name="treatment"),
+    path('search',views.search,name='search'),
+    path('readMore/<int:b_id>' , views.readMore , name='readMore')
 
 ]
 

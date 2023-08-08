@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import  Image ,Hero ,About ,Team
+from .models import  Image ,Hero ,About ,Team , Blog
 from .forms import RegisterForm , EmailForm 
 # Create your views0 here.
 
@@ -20,6 +20,9 @@ def home(request):
     form = RegisterForm(request.POST )
     form1 = EmailForm(request.POST)
     
+    
+    blog = Blog.objects.all()
+    
     if form.is_valid():
         form.save()
     
@@ -33,12 +36,20 @@ def home(request):
         'h':H,
         'a':A,
         't':T,
+        'blog':blog
     }
     
     
     return render(request , 'index.html' , context)
 
-
+def search(request):
+    query = request.GET.get('q','')
+    if query:
+        results = Blog.objects.filter(title__icontains=query)
+    else:
+        results = []
+        
+    return render(request, 'search_results.html',{'results':results})
 
 
 
@@ -74,3 +85,9 @@ def testimonial(request):
 def treatment(request):
     return render(request , 'treatment.html')
 
+def readMore(request , b_id):
+    blog = Blog.objects.get(pk=b_id)
+    context = {
+        'blog':blog
+    }
+    return render(request , 'blog.html' , context)

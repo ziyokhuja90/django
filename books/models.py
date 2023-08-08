@@ -55,3 +55,12 @@ class Team(models.Model):
     team2 = models.ImageField(upload_to='rasmlar')
     team3 = models.ImageField(upload_to='rasmlar')
 
+
+
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=40)
+    body = models.TextField()
+    img = models.ImageField(upload_to='blog')
+    

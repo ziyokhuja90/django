@@ -1,0 +1,13 @@
+
+
+.rasm{
+    border-radius: 5px;
+    transition: 2s;
+    width: 98%;
+}
+
+.rasm:hover{
+
+    border-radius: 100%;
+    box-shadow: 1px 1px 555px   555px rgba(0, 0, 0, 0.285);
+}
