@@ -10,7 +10,8 @@ urlpatterns = [
     path("testimonial",views.testimonial,name="testimonial"),
     path("treatment",views.treatment,name="treatment"),
     path('search',views.search,name='search'),
-    path('readMore/<int:b_id>' , views.readMore , name='readMore')
+    path('readMore/<int:b_id>' , views.readMore , name='readMore'),
+    path('login/', views.sign_in, name='login'),
 
 ]
 
