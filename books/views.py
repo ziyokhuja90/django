@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import  Image ,Hero ,About ,Team , Blog
+from .models import  Image ,Hero ,About ,Team , Blog ,Projects
 from .forms import RegisterForm , EmailForm ,LoginForm 
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
@@ -45,7 +45,7 @@ def home(request):
     form1 = EmailForm(request.POST)
     
     
-    blog = Blog.objects.all()
+    blog = Projects.objects.all()
     
     if form.is_valid():
         form.save()
@@ -76,9 +76,12 @@ def search(request):
     return render(request, 'search_results.html',{'results':results})
 
 
-
-
-
+def project(request):
+    blog = Projects.objects.all()
+    
+    
+    return render(request , 'projects.html' , {'blog':blog})
+    
 
 
 
@@ -110,8 +113,16 @@ def treatment(request):
     return render(request , 'treatment.html')
 
 def readMore(request , b_id):
-    blog = Blog.objects.get(pk=b_id)
+    
+    
+    blog = Projects.objects.get(pk=b_id)
     context = {
         'blog':blog
     }
     return render(request , 'blog.html' , context)
+
+def delete(request , b_id):
+    blog = Projects.objects.get(pk=b_id)
+    
+    blog.delete()
+    return redirect('project')

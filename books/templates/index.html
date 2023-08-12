@@ -104,6 +104,9 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'project' %}">ptoject</a>
+                  </li>
                 </ul>
               </div>
               <div class="quote_btn-container">
@@ -386,33 +389,45 @@
       </h2>
     </div>
     <div class="row">
-
-      {% for blog in blog %}
-      
+      {% comment %} <table  class="table">
+        <thead>
+ 
+        </thead>
+        <tbody>
          
-      <div class="col-md-6 col-lg-3">
-        <div class="box ">
-          <div class="img-box">
-            <img src="{% static 'images/t1.png' %}" alt="">
-          </div>
-          <div class="detail-box">
-            <h4>
-              {{blog.title}}
-            </h4>
-            <p>
+      {% for blog in blog %}
 
-              {{blog.body}}
+      <tr>
 
-              
-            </p>
-            <a href="  {% url 'readMore' blog.id  %}">
-            readMore
-            </a>
-          </div>
-        </div>
-      </div>
+      <td>ism: {{blog.name}}</td>
+
+      <td>muallif:  {{blog.muallif}}</td>
+  
+      <td>miqdor: {{blog.miqdor}}</td>
+  
+      <td>narxi:  {{blog.narxi}}</td>
+
+      <td>
+        <a href="  {% url 'readMore' blog.id  %}">
+          readMore
+          </a></td>
+  
+          <td>
+  
+            <a class="alert alert-danger" href="  {% url 'delete' blog.id  %}">
+              delete
+              </a>
+          </td>
+      </tr>
+     
+
+    
+
+        
       {% endfor %}
-   
+    </tbody>
+    </table>
+    {% endcomment %}
       {% comment %} <div class="col-md-6 col-lg-3">
         <div class="box ">
           <div class="img-box">

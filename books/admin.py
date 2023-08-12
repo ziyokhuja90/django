@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Register , Email , Image , Hero , About , Team , Blog
+from .models import Register , Email , Image , Hero , About , Team , Blog , Projects
 # Register your models here.
 
 admin.site.register(Register)
@@ -12,3 +12,4 @@ admin.site.register(Team)
 
 # <br>
 admin.site.register(Blog)
+admin.site.register(Projects)

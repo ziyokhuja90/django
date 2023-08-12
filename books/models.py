@@ -63,4 +63,11 @@ class Blog(models.Model):
     title = models.CharField(max_length=40)
     body = models.TextField()
     img = models.ImageField(upload_to='blog')
-    
+
+
+
+class Projects(models.Model):
+    name =  models.CharField(max_length=30)
+    muallif =  models.CharField(max_length=30)
+    narxi = models.FloatField()
+    miqdor = models.IntegerField()
